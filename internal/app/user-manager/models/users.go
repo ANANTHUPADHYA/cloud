@@ -1,6 +1,6 @@
 package models
 
-import fileModels "github.com/cloud/internal/app/files-manager/models"
+import fileModels "github.com/ANANTHUPADHYA/cloud/internal/app/files-manager/models"
 
 // User represents the users
 type Users struct {

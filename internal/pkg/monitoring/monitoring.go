@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/cloud/internal/pkg/utils"
+	"github.com/ANANTHUPADHYA/cloud/internal/pkg/utils"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

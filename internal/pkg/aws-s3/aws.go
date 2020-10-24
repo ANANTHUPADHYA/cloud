@@ -13,9 +13,9 @@ import (
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 
-	"github.com/cloud/internal/pkg/http/transport"
-	"github.com/cloud/internal/pkg/models"
-	"github.com/cloud/internal/pkg/utils"
+	"github.com/ANANTHUPADHYA/cloud/internal/pkg/http/transport"
+	"github.com/ANANTHUPADHYA/cloud/internal/pkg/models"
+	"github.com/ANANTHUPADHYA/cloud/internal/pkg/utils"
 )
 
 const (

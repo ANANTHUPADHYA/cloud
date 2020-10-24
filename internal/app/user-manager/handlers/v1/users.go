@@ -3,11 +3,11 @@ package v1
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/cloud/internal/app/files-manager/constants"
-	"github.com/cloud/internal/app/user-manager/models"
-	"github.com/cloud/internal/app/user-manager/services"
-	errModels "github.com/cloud/internal/pkg/models"
-	"github.com/cloud/internal/pkg/utils"
+	"github.com/ANANTHUPADHYA/cloud/internal/app/files-manager/constants"
+	"github.com/ANANTHUPADHYA/cloud/internal/app/user-manager/models"
+	"github.com/ANANTHUPADHYA/cloud/internal/app/user-manager/services"
+	errModels "github.com/ANANTHUPADHYA/cloud/internal/pkg/models"
+	"github.com/ANANTHUPADHYA/cloud/internal/pkg/utils"
 	"net/http"
 	"golang.org/x/crypto/bcrypt"
 )

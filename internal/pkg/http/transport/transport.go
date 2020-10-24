@@ -10,7 +10,7 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/cloud/internal/pkg/monitoring"
+	"github.com/ANANTHUPADHYA/cloud/internal/pkg/monitoring"
 )
 
 //LoggerTransport wraps und tripper interface for logging

@@ -18,8 +18,8 @@ import (
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3iface"
 
-	fileModels "github.com/cloud/internal/app/files-manager/models"
-	"github.com/cloud/internal/pkg/models"
+	fileModels "github.com/ANANTHUPADHYA/cloud/internal/app/files-manager/models"
+	"github.com/ANANTHUPADHYA/cloud/internal/pkg/models"
 )
 
 const (

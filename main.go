@@ -1,7 +1,7 @@
 package main
 
 import (
-	awss3 "github.com/cloud/internal/pkg/aws-s3"
+	awss3 "github.com/ANANTHUPADHYA/cloud/internal/pkg/aws-s3"
 	"net/http"
 	_ "net/http/pprof"
 	"time"
@@ -9,13 +9,13 @@ import (
 	"github.com/gin-gonic/gin"
 	log "github.com/sirupsen/logrus"
 
-	fileMgHndlr "github.com/cloud/internal/app/files-manager/handlers/v1"
-	fileSvc "github.com/cloud/internal/app/files-manager/services"
-	userMgHndlr "github.com/cloud/internal/app/user-manager/handlers/v1"
-	userSvc "github.com/cloud/internal/app/user-manager/services"
-	"github.com/cloud/internal/pkg/database"
-	"github.com/cloud/internal/pkg/http/transport"
-	"github.com/cloud/internal/pkg/utils"
+	fileMgHndlr "github.com/ANANTHUPADHYA/cloud/internal/app/files-manager/handlers/v1"
+	fileSvc "github.com/ANANTHUPADHYA/cloud/internal/app/files-manager/services"
+	userMgHndlr "github.com/ANANTHUPADHYA/cloud/internal/app/user-manager/handlers/v1"
+	userSvc "github.com/ANANTHUPADHYA/cloud/internal/app/user-manager/services"
+	"github.com/ANANTHUPADHYA/cloud/internal/pkg/database"
+	"github.com/ANANTHUPADHYA/cloud/internal/pkg/http/transport"
+	"github.com/ANANTHUPADHYA/cloud/internal/pkg/utils"
 )
 
 var (
