@@ -1,7 +1,5 @@
 package awss3
 
-//go:generate mockgen -source ./aws.go -package awss3 -destination ./aws_mock.go
-
 import (
 	"context"
 	"fmt"
@@ -42,7 +40,6 @@ func NewAWSCredsImpl() AWSCredentials {
 
 // GetAwsCredDetails - to get all aws credential details
 func (awsCreds *awsCreds) GetAwsCredDetails(context.Context) (string, string, string, error) {
-	ctx := context.Background()
 	awsAccessKey, set := os.LookupEnv(awsS3AccessKey)
 	if !set {
 		err := fmt.Errorf("AWS access key is not set in ENV %s", awsS3AccessKey)
