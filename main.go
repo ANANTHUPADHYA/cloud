@@ -16,6 +16,7 @@ import (
 	"github.com/ANANTHUPADHYA/cloud/internal/pkg/database"
 	"github.com/ANANTHUPADHYA/cloud/internal/pkg/http/transport"
 	"github.com/ANANTHUPADHYA/cloud/internal/pkg/utils"
+	 cors "github.com/rs/cors/wrapper/gin"
 )
 
 var (
@@ -29,6 +30,7 @@ func main() {
 
 	// Recovery middleware recovers from any panics and writes a 500 if there was one.
 	router.Use(gin.Recovery())
+	router.Use(cors.AllowAll())
 
 	//healthz endpoint
 	router.GET(healthzEndpoint, healthzCheck)
