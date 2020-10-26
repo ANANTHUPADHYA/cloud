@@ -1,0 +1,52 @@
+<mat-spinner class="spinner" *ngIf="showSpinner"></mat-spinner>
+<div class="spinnerDiv" *ngIf="showSpinner"></div>
+
+<div fxLayout="row wrap">
+    <h3 fxFlex="100%" class="header-font" style="padding-top: 14px; padding-left: 10px;">Admin Section&nbsp; / &nbsp; All files</h3>
+</div>
+    <div style="margin: 10px">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="fileName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="fileName"> File name </th>
+        <td mat-cell *matCellDef="let element"> {{element.fileName}} </td>
+      </ng-container>
+    
+      <!-- Weight Column -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="description"> File Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="modifiedDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="modifiedDate"> Last Modified Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.modifiedDate | date: 'medium'}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="uploadedDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="uploadedDate"> Uploaded Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.uploadedDate | date: 'medium'}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="firstname">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header="firstname" > Firstname</th>
+        <td mat-cell *matCellDef="let element" > {{element?.firstname}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="lastname">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header="lastname"> Lastname </th>
+        <td mat-cell *matCellDef="let element" > {{element?.lastname}}</td>
+      </ng-container>
+      
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell style="cursor: pointer" *matCellDef="let element" (click)="deleteFile(element.email, element.fileName)" title="Delete File"> <mat-icon color="warn" >delete</mat-icon> </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    
+    </div>
+    

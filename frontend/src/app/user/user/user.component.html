@@ -1,0 +1,55 @@
+<mat-spinner class="spinner" *ngIf="showSpinner"></mat-spinner>
+<div class="spinnerDiv" *ngIf="showSpinner"></div>
+<div fxLayout="row wrap">
+    <h3 fxFlex="50%" class="header-font" style="padding-top: 14px; padding-left: 10px;">Your files</h3>
+    <div fxFlex="50%" fxLayoutAlign="flex-end">
+    <button mat-raised-button color="accent" style="margin: 12px" [routerLink]="['/home/upload']">Upload File</button>
+    </div>
+</div>
+    <div style="margin: 10px">
+      <div *ngIf="dataSource.data.length === 0">
+        <h4 fxFlex="50%" class="header-font" style="padding-top: 14px; padding-left: 10px; font-size: 16px; ">No files uploaded.</h4>
+      </div>
+    <table *ngIf="dataSource.data.length > 0" mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    
+     
+      <ng-container matColumnDef="file_name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="file_name"> File name </th>
+        <td mat-cell *matCellDef="let element"> {{element.file_name}} </td>
+      </ng-container>
+    
+ 
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="description"> File Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
+    
+
+      <ng-container matColumnDef="updated_at">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="updated_at"> Last Modified Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.updated_at | date: 'medium'}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="created_at">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="created_at"> Uploaded Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.created_at | date: 'medium'}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell style="cursor: pointer; padding-right:30px" *matCellDef="let element" (click)="goToEdit(element)"title="Edit file"> <mat-icon color="accent" >edit</mat-icon> </td>
+      </ng-container>
+      <ng-container matColumnDef="download">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell style="cursor: pointer; padding-right:30px" *matCellDef="let element" (click)="downloadFile(element)"title="Download file"> <mat-icon color="accent" >cloud_download</mat-icon> </td>
+      </ng-container>
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell style="cursor: pointer" *matCellDef="let element" (click)="deleteFile(element.file_name)" title="Delete file"> <mat-icon color="warn" >delete</mat-icon> </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    
+    </div>
+    

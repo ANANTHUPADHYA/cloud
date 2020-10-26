@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/_fonts.scss';
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+// primary font
+$primary_font: 'Ubuntu';
+$secondary_font: 'Great Vibes';
+// font-weight
+$thin:100;
+$light:300;
+$regular:400;
+$bold:700;
+$black:900;
+// Font size
+$font-xs:12px;
+$font-sm: 14px;
+$primary-fs: 16px;
+$font-md: 18px;
+$font-lg: 20px;
+
+.remove-underline {
+  text-decoration: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+body {
+  font-family: $primary_font !important;
+    font-size: $primary-fs;
+    font-weight: $regular;
+    margin: 0;
+    background-color: #52f352bd;
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: #d287f3 !important;
+}
+
+.fontFamily{
+  font-family: 'Ubuntu';
+}
+.width100{
+width: 100%;
+}
+html, body { height: 100%; }

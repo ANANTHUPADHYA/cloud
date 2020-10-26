@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a class="remove-underline" [routerLink]="['/home']"> <span class="header-icon"><mat-icon color="accent">cloud_upload</mat-icon></span><span class="header-font" >MyFileExplorer</span></a>
+    <span class="logout cursor-pointer" (click)="logout()" *ngIf="showLogOut">Logout<mat-icon  title="Logout">power_settings_new</mat-icon></span>
+   <mat-icon title="Admin Section" class="admin cursor-pointer "  (click)="goToAdmin()" *ngIf="isAdmin">admin_panel_settings</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-content>
+      <form [formGroup]="signupForm" >
+        <h2>Sign up</h2>
+        <!-- <mat-error *ngIf="loginInvalid">
+          The email and password were not recognised
+        </mat-error> -->
+        <mat-form-field >
+          <mat-label>Email:</mat-label>
+          <input matInput placeholder="Email" formControlName="emailAddress" required>
+          <mat-error>
+            Please provide a valid email address
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field >
+            <mat-label>Firstname:</mat-label>
+            <input matInput placeholder="Firstname" formControlName="firstName" required>
+            
+          </mat-form-field>
+          <mat-form-field >
+            <mat-label>Lastname:</mat-label>
+            <input matInput placeholder="Lastname" formControlName="lastName" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>User Type</mat-label>
+            <mat-select formControlName="isAdmin" required>
+              <mat-option value=true>Admin</mat-option>
+              <mat-option value=false>User</mat-option>
+            </mat-select>
+          </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password:</mat-label>
+          <input matInput type="password" placeholder="Password" formControlName="password" required>
+          <mat-error>
+            Please provide a valid password
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!signupForm.valid" (click)="register()">Register</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  

@@ -1,0 +1,41 @@
+
+<mat-spinner class="spinner" *ngIf="showSpinner"></mat-spinner>
+<div class="spinnerDiv" *ngIf="showSpinner"></div>
+<div fxFlex>
+    <h2 *ngIf="!fileId" class="header">Upload File</h2>
+    <h2 *ngIf="fileId" class="header">Edit File</h2>
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+      <mat-card class="card">
+      <div>
+        <h3 style="font-family: Ubuntu;">Enter the File details:</h3>
+        <form class="example-form" [formGroup]=addEditFileForm>
+          <div><strong>1. Name</strong></div>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="File Name" formControlName="name" [disabled]=true>
+            <mat-error *ngIf="addEditFileForm?.controls?.name?.hasError('required')">
+              Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <div><strong>2. Description</strong></div>
+          <mat-form-field class="example-full-width">
+            <textarea  matInput formControlName="description"></textarea>
+            <mat-error *ngIf="addEditFileForm?.controls?.description?.hasError('required')">
+              Description is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+         
+          <div><strong>3. Choose File</strong></div>
+            <input type="file" id="file" (change)="handleFileInput($event.target.files)" style="padding: 5px;">
+            <mat-error *ngIf="addEditFileForm?.controls?.file?.hasError('required')">
+              File is <strong>required</strong>
+            </mat-error>
+  
+        </form>
+        <button mat-raised-button color="primary" *ngIf="!fileId" (click)="addEditFile()" style="margin: 5px;">Upload</button>
+        <button mat-raised-button color="primary" *ngIf="fileId" (click)="editfile()" style="margin: 5px;">Edit</button>
+      </div>
+    </mat-card>
+    </div>
+  
+  </div>
+  

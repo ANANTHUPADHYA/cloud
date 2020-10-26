@@ -1,0 +1,55 @@
+.example-form {
+    min-width: 350px;
+    max-width: 700px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+
+  mat-card {
+    top: 25px;
+    max-width: 400px;
+    margin: 2em auto;
+    font-family: "Ubuntu";
+    min-height: 250px;
+  }
+  
+  .mat-card-subtitle{
+    color:greenyellow;
+  }
+  
+  
+  mat-form-field {
+    display: block;
+    color: burlywood;
+    font-family: 'Ubuntu';
+  }
+  
+  .header {
+    color: white; 
+    font-family: Ubuntu; 
+    text-align: center;
+    margin-top: 40px;
+  }
+
+
+.spinnerDiv {
+    position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      opacity: 0.2;
+      z-index: 1000;
+  }
+  
+  .spinner {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 2;
+  }

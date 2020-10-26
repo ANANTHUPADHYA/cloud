@@ -1,0 +1,38 @@
+$secondary_font: 'Great Vibes';
+.header-font {
+  font-family: $secondary_font !important;
+  font-size:28px;
+  color: white;
+    margin-left: 37px;
+}
+
+
+
+.header-icon{
+  padding: 5px;
+    background: white;
+    border-radius: 50%;
+    height: 25px;
+    position: absolute;
+    width: 25px;
+}
+
+.logout {
+  position: absolute;
+  font-family: 'Ubuntu';
+  font-size: initial;
+  right: 0;
+  mat-icon {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 2px;
+    color: white;
+  }
+}
+
+
+
+.admin {
+    right: 14vh;
+    position: absolute;
+}
